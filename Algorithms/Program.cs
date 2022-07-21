@@ -8,6 +8,7 @@ using GeekBrainsTests;
 using MyList;
 using Algorithms.Lesson_2;
 using Algorithms.Lesson_3;
+using Algorithms.Lesson_4;
 using BenchmarkDotNet.Running;
 using BenchmarkDotNet.Attributes;
 
@@ -19,7 +20,7 @@ namespace AlgorithmsAndDataStructures
         public static void Info()
         {
             StringBuilder NameOfTask = new StringBuilder();
-            NameOfTask.Append(Lesson_1.LessonName + "\n" + Lesson_2.LessonName + "\n" + PointBenchmark.LessonName + "\n");
+            NameOfTask.Append(Lesson_1.LessonName + "\n" + Lesson_2.LessonName + "\n" + PointBenchmark.LessonName + "\n" + Tree.LessonName + "\n");
             Console.WriteLine("Введите номер домашнего задания что бы откррыть его.");
             Console.WriteLine("Доступные домашние работы: \n" + NameOfTask);
         }
@@ -94,6 +95,12 @@ namespace AlgorithmsAndDataStructures
                     case "3":
 
                         BenchmarkRunner.Run<PointBenchmark.BenchmarkForClassAndStruct>();
+
+                        break;
+
+                    case "4":
+                        Console.Clear();
+                        Tree.OutputHomework();
 
                         break;
 
